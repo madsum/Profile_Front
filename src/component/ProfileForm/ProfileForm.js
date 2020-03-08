@@ -98,7 +98,8 @@ function ProfileForm(props) {
         setProfile(props.location.state.profile);
         setProfileId(props.location.state.profile.id);
         props.location.state.profile.fileDownloadUri? 
-        setEditPhotoText(<a href={props.location.state.profile.fileDownloadUri} target="_blank"> 
+        setEditPhotoText(<a href={props.location.state.profile.fileDownloadUri} 
+        target="_blank" rel="noopener noreferrer" > 
         Current Profile Photo</a>) : setEditPhotoText('');
         setReplacePhotoPath(props.location.state.profile.fileDownloadUri);
       }

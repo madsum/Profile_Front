@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { Router, Switch, Route } from "react-router-dom";
+import  { Router, Switch, Route } from "react-router-dom";
 
-import Home from './component/Home/Home';
 import ProfileForm from './component/ProfileForm/ProfileForm'
+import ViewProfiles from './component/ViewProfiles/ViewProfiles'
+import Home from './component/Home/Home';
 import history from './history';
 import OnSubmitPage from "./component/OnSubmitPage/OnSubmitPage";
 
@@ -13,6 +14,8 @@ export default class Routes extends Component {
                 <Switch>
                     <Route path="/" exact component={Home} />
                     <Route path="/CreateProfile/:title" exact component={ProfileForm} />
+                    <Route path="/ViewProfile" exact component={ViewProfiles} />
+                    <Route path="/EditProfile" exact component={ProfileForm} />
                     <Route path="/OnSubmit" exact component={OnSubmitPage} />
                 </Switch>
             </Router>

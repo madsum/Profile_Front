@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Navigation from './component/Navigation/Navigation';
 import Routes from './Routes';
 
-
 class App extends Component {
   render() {
     return (
@@ -15,3 +14,4 @@ class App extends Component {
 }
 
 export default App;
+
