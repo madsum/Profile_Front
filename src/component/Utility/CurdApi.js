@@ -7,7 +7,7 @@ export default class CurdApi {
       let formData = new FormData();
       formData.append("file", selectedFile);
       formData.append("path", replacePhotoPath);
-      axios.post('http://localhost:8080/photo', formData, {
+      axios.post('https://profile-back.herokuapp.com/photo', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -39,7 +39,7 @@ export default class CurdApi {
       figure: data.figure? data.figure : ''
     }
 
-    axios.post('http://localhost:8080/profile', profile)
+    axios.post('https://profile-back.herokuapp.com/profile', profile)
       .then(res => {
         history.push({
           pathname: "/OnSubmit",
@@ -62,7 +62,7 @@ export default class CurdApi {
 
   static async getAllProfiles() {
     try {
-      const response = await fetch(`http://localhost:8080/all/profile`);
+      const response = await fetch(`https://profile-back.herokuapp.com/all/profile`);
       const json = await response.json();
       return json;
     } catch (error) {
