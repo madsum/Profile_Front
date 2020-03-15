@@ -228,7 +228,7 @@ function ProfileForm(props) {
 
       <input name="photo" className="Column" type="file" accept="image/*"
         onChange={(e) => { fileChangedHandler(e) }} 
-        ref={register({ required: true })}/>
+        ref={register({ required: false })}/>
       <ErrorMessage error={errors.photo} />
       {imagePreview}
 
